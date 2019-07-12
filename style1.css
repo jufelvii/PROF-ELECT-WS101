@@ -1,0 +1,96 @@
+#container{
+height: 800px;
+width: 1000px;
+margin-left: auto;
+	margin-right: auto;
+}
+#header {
+	background:linear-gradient(to left, green , white , green , white ) ;
+	width: 100%;
+	height: 200px;
+	
+
+}
+
+#header strong{
+	font-size: 30px;
+	padding-bottom: 80px;
+	font-family: "Comic Sans MS";
+}
+#header em{
+	padding-left: 280px;
+}
+#header img{
+	height: 150px;
+	width: 150px;
+	margin-top: 20px;
+	margin-left: 130px;
+	border-radius: 80px;
+	cursor: pointer;
+}
+
+#nav{
+background-color: gray;
+width: 74.2%;
+height: 60px;
+position: absolute;
+
+
+}
+a{
+	font-family: "Comic Sans MS";
+	text-decoration: none;
+	font-size: 25px;
+	padding-left: 10%;
+	color: black;
+}
+#content{
+background:linear-gradient(to left , #7af442 , white , #7af442);
+height: 800px;
+padding-top: 50px;
+
+
+}
+#content img{
+	width: 180px;
+	height: 180px;
+	padding-left: 400px;
+    padding-top: 50px;
+    cursor: pointer;
+}
+img{
+	transition: all 1s;
+}
+img:hover{
+	transform: scale(1.1);
+}
+h2{
+	margin-left: 390px;
+	font-family: "Comic Sans MS"; 
+}
+.b{
+
+	margin-left: 120px;
+}
+h1{
+	font-family: "Comic Sans MS"; 
+	margin-left: 11px;
+}
+h3{
+	margin-left: 15px;
+	font-family: "Comic Sans MS"; 
+}
+#footer{
+	background:linear-gradient(to left , green , green , black) ;
+	height: 40px;
+	width: 1000px;
+ 	margin-left: 167px;
+ 	margin-top: 250px;
+
+}
+#footer h6{
+	text-align: center;
+	padding-top: 10px;
+	font-family:  "Comic Sans MS";
+	font-size: 17px;
+}
