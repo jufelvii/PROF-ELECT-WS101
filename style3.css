@@ -28,7 +28,9 @@ img{
 	border-radius: 80px;
 	cursor: pointer;
 }
-
+body {
+	background-color: green;
+  }
 #nav{
 background-color: gray;
 width: 74.2%;
@@ -47,6 +49,11 @@ a{
 img{
 	transition: all 1s;
 }
+#p01 {
+	color: blue;
+	text-align: center
+	
+  }
 img:hover{
 	transform: scale(1.1);
 }

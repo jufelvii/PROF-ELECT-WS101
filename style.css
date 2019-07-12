@@ -20,6 +20,9 @@ margin-left: auto;
 #header em{
 	padding-left: 280px;
 }
+body {
+	background-color: green;
+  } 
 img{
 	height: 150px;
 	width: 150px;

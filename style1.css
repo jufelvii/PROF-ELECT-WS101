@@ -28,7 +28,9 @@ margin-left: auto;
 	border-radius: 80px;
 	cursor: pointer;
 }
-
+body {
+	background-color: green;
+  }
 #nav{
 background-color: gray;
 width: 74.2%;
