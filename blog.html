@@ -1,49 +1,73 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>BLOG</title>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css" title="style" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BLOG</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <!-- Material Font -->
+    <link rel="stylesheet" href="./assets/css/material-font.css">
+    <!-- Mobile Support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
- 
 <body>
+             
+    <nav>
+        <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Jufel Villa</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="blog.html">Blog</a></li>
+           <li><a href="logout.html">logout</a></li>
+        </ul>
+        </div>
+        <div style="padding-top: 500px;">
+            <nav>
+                <div class="nav-wrapper" >
+                <a href="#" class="brand-logo"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                   
+                </ul>
+                </div>
+            </nav>
+            </div>
+    </nav>
 
-  <div id="main">
+    <div class="center">
+        <br>
+        <h6 style="text-align: justify">As a One Direction super fan, today is a dark day for me. If you do not keep up with the tabloids, you may not have caught word of five-year One Direction member, Zayn Malik, deciding to part ways with the group. After a week of rumors and media scrutiny, Malik found himself unable to go on being the center of the celebrity limelight.
 
-    <div id="header">
+            Obviously, this sort of treatment has gone on for much longer than a week, about five years to be exact, but this past week, Malik was allegedly caught cheating on his fiance, Perrie Edwards. This led to backlash from fans as well as the media, causing Zayn to take a leave of absence from One Direction’s current world tour. After a short break, Zayn released a statement explaining to the fans that he would be officially leaving the band. Fans were absolutely gutted, as represented on every social media site in existence.
+            
+            I honestly cannot exactly fathom One Direction without Zayn Malik. He was the best singer, in my opinion. Therefore, all albums made from here on out will undoubtedly be missing a certain quality that the band once had. Malik has always been the one to take a good song by the band and make it great, by ad-libing riffs and ungodly high notes. One Direction has confirmed that they will be finishing their tour as scheduled and recording their next album as they had planned.
+            
+            Members of the band have broken their silence on Twitter since the news hit the media.
+            
+            “All the love as always. H” Harry Styles tweeted. Louis also expressed his support. “Been a crazy couple of days but know that we are going to work harder than ever to deliver the best album we’ve ever made for you guys!” Tomlinson tweeted.
+            
+            Since Zayn left, rumors have spread that he has been working on a solo career with Naughty Boy Records. How rude. If he left because of the media scrutiny then why would he go out for a solo career!?
+            
+            Maybe the rumors are exactly that; rumors. I hope so. In any event, I believe that One Direction will move on, because at some point it was bound to happen. They cannot go on living on cloud nine forever.</h6>
+        </div>
 
-      <div id="logo">
-        <h1 style="color: white">Jufel Vii</h1>
-      </div>
 
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="index.html">Home</a></li>
-          <li class="selected"><a href="blog.html">Blog</a></li>
-                    <li style="margin-left: 560px;"><a href="login.html">Log out</a></li>
-          </ul>
-      </div>
-      <img src="assets/img/img4.jpg" height="250px" width="300px" style="padding-left: 230px">
-      <h3 style="padding-left: 215px" style="text-align: justify-all;"><p style="color: white">Information technology, IT, is defined as the technology that is used to acquire, store,<br> process and organize data to 'useful information' which can now be used to process <br>data in specific applications. This essay will examine the definition of the term Informa- <br>tion Technology, the history of IT its importance, advantages and disadvantages that <br>have resulted due to use of IT technologies.</p></h3>
 
-      <img src="assets/img/img3.jpg" height="250px" width="300px" style="padding-left: 830px">
 
-      <h3 style="padding-left: 215px" style="text-align: justify-all;"><p style="color: white">Information technology, IT, is defined as the technology that is used to acquire, store,<br> process and organize data to 'useful information' which can now be used to process <br>data in specific applications. This essay will examine the definition of the term Informa- <br>tion Technology, the history of IT its importance, advantages and disadvantages that <br>have resulted due to use of IT technologies.</p></h3>
-
-    </div>
-   
-      
-      
-   
-  </div>
-  
-  <div id="footernew">
-    <CENTER><h1 style="color: white"><p style="padding-top: 1100px;">COPYRIGHT 2019 | JUFEL VII | BACHELORS OF SCIENCE IN INFORMATION TECHNOLOGY</p></h1></CENTER>
+    <!-- Material JS -->
+    <script src="./assets/js/materialize.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems);
+        var elems = document.querySelectorAll('.scrollspy');
+        var instances = M.ScrollSpy.init(elems);
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+    });
+    </script>
     
-  </div>
 </body>
 </html>
