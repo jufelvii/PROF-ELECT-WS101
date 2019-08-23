@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/css/materialize.min.css">
     <!-- Material Font -->
     <link rel="stylesheet" href="./assets/css/material-font.css">
+    <link rel="stylesheet" href="./assets/css/style2.css">
     <!-- Mobile Support -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
@@ -36,28 +37,66 @@
             </div>
     </nav>
 
-    <div class="center">
-        <br>
-        <h6 style="text-align: justify">As a One Direction super fan, today is a dark day for me. If you do not keep up with the tabloids, you may not have caught word of five-year One Direction member, Zayn Malik, deciding to part ways with the group. After a week of rumors and media scrutiny, Malik found himself unable to go on being the center of the celebrity limelight.
-
-            Obviously, this sort of treatment has gone on for much longer than a week, about five years to be exact, but this past week, Malik was allegedly caught cheating on his fiance, Perrie Edwards. This led to backlash from fans as well as the media, causing Zayn to take a leave of absence from One Direction’s current world tour. After a short break, Zayn released a statement explaining to the fans that he would be officially leaving the band. Fans were absolutely gutted, as represented on every social media site in existence.
-            
-            I honestly cannot exactly fathom One Direction without Zayn Malik. He was the best singer, in my opinion. Therefore, all albums made from here on out will undoubtedly be missing a certain quality that the band once had. Malik has always been the one to take a good song by the band and make it great, by ad-libing riffs and ungodly high notes. One Direction has confirmed that they will be finishing their tour as scheduled and recording their next album as they had planned.
-            
-            Members of the band have broken their silence on Twitter since the news hit the media.
-            
-            “All the love as always. H” Harry Styles tweeted. Louis also expressed his support. “Been a crazy couple of days but know that we are going to work harder than ever to deliver the best album we’ve ever made for you guys!” Tomlinson tweeted.
-            
-            Since Zayn left, rumors have spread that he has been working on a solo career with Naughty Boy Records. How rude. If he left because of the media scrutiny then why would he go out for a solo career!?
-            
-            Maybe the rumors are exactly that; rumors. I hope so. In any event, I believe that One Direction will move on, because at some point it was bound to happen. They cannot go on living on cloud nine forever.</h6>
-        </div>
+   
+        	
+	<html>
+  <head>
+    <title>My To Do List</title>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class>Todo App</h1>
+      <todo-form @todo-created="addTodo"></todo-form>
+      <todo-list :todos="todos"></todo-list>
+    </div>
+    <script type="text/javascript">
+      // Our app here
+      Vue.component('todo-form', {
+        template: '<form @submit.prevent="todoEvent"><input type="text" v-model="newTodo">' +
+                  '<input type="submit" value="Add"></form>',
+        data: function () {
+          return {
+            newTodo: ''
+          }
+        },
+        methods: {
+          todoEvent: function () {
+            this.$emit('todo-created', this.newTodo);
+            this.newTodo = '';
+          }
+        }
+      });
+      Vue.component('todo-list', {
+        template: '<ul><li v-for="todo in todos">{{ todo }}</li></ul>',
+        props: ['todos']
+      });
+      new Vue({
+        el: '#app',
+        data: {
+          'todos': []
+        },
+        methods: {
+          addTodo: function (todo) {
+            this.todos.push(todo);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
+          
+        
+        
 
 
 
 
     <!-- Material JS -->
     <script src="./assets/js/materialize.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.collapsible');
