@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <link href="./assets/css/material-font.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+             
+    <nav>
+        <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Jufel Villa</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="todo.html">ToDo</a></li>
+           <li><a href="logout.html">logout</a></li>
+        </ul>
+        </div>
+        <div style="padding-top: 500px;">
+            <nav>
+                <div class="nav-wrapper" >
+                <a href="#" class="brand-logo"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                   
+                </ul>
+                </div>
+            </nav>
+            </div>
+    </nav>
+
+   
+    <main id="app" class="container">
+    
+        <h3>My Task</h3>
+    
+        <fieldset>
+            <form class="row" @submit.prevent="addTask(title)">
+                <div class="input-field col m6 offset-m3">
+                    <input id="taskTitle" type="text" v-model="title">
+                </div>
+                <div class="col m4 offset-m5">
+                    <button type="submit" class="waves-effect waves-light btn">Add</button>
+                </div>
+            </form>
+        </fieldset>
+    
+        <h3>Tasks list</h3>
+    
+        <p>{{ remaining() }} / {{ tasks.length }}</strong> task<span v-if="remaining() > 1">s</span> remaining.</p>
+        
+        <ul class="collection">
+            <li class="collection-item" v-for="(task, index) in tasks">
+                <label :for="'t_'+ (index + 1)">
+                  <input type="checkbox" v-model="task.isDone" :id="'t_'+ (index + 1)">
+                  <span>{{ task.title }}</span>
+                </label>
+                <a href="#" class="link-delete" title="Delete" @click="deleteTask(index)">
+                    <i class="material-icons">delete_forever</i>
+                </a>
+            </li>
+        </ul>
+    
+    </main>
+    <script src="./assets/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+    
+    new Vue({
+            el: 'main#app',
+            data: {
+                tasks: [
+                   
+                ],
+                title : ""
+            },
+    
+            methods: {
+                remaining: function () {
+                    var remains = 0;
+                    this.tasks.forEach(function (task) {
+                        if (task.isDone === false) {
+                            remains++;
+                        }
+                    });
+                    return remains;
+                },
+    
+                deleteTask: function (index) {
+                    Vue.delete(this.tasks, index);
+                },
+    
+                addTask: function (title) {
+                    if (title !== "") {
+                        Vue.set(this.tasks, this.tasks.length, {title, isDone: false});
+                    }
+                }
+            }
+        });
+    </script>
+        
+        
+
+
+
+
+    <!-- Material JS -->
+    <script src="./assets/js/materialize.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems);
+        var elems = document.querySelectorAll('.scrollspy');
+        var instances = M.ScrollSpy.init(elems);
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+    });
+    </script>
+    
+</body>
+</html>
